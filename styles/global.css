@@ -533,16 +533,18 @@ ol {
     }
 
     #project {
-        display: none;
+        display: block;
+        font-size: 12px;
     }
 
     #stuff {
-        display: inline;
+        display: grid;
     }
 
     #plain {
         justify-self: left;
-        font-size: 16px;
+        font-size: 12px;
+        opacity: .5;
     }
 
     #foreword {
