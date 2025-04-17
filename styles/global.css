@@ -1,16 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=area-normal:wght@100..900&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
 
+@import url("https://use.typekit.net/hol0vxx.css");
 
 #indexbody {
     min-height: 100vh;
     background-image: url(../assets/city.png);
     background-size: 100%;
     background-repeat: no-repeat;
-    background-color: #1B0E1F;
+    background-color: #210c20;
+}
+
+.hidden {
+    display: none;
+}
+
+#choosepath .hidden {
+    display: none;
+}
+
+
+
+.pullquote.showthis {
+    margin-left: 25%;
+    margin-right: 25%;
 }
 
 #header {
@@ -26,37 +40,99 @@
     text-align: center;
     width: 100%;
     display: grid;
-    font-family: "Courier Prime", monospace;
+    font-family: "area-normal", sans-serif;
     color: white;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     position: fixed;
     top: 0;
+    margin: 1%;
 }
 
 #name {
     grid-column: 1;
+    justify-self: left;
 }
 
 #project {
     grid-column: 2;
+   
+    -webkit-animation-delay:5s;
+    animation-delay: 5s;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    white-space: nowrap; /* Keeps the content on a single line */
+    animation: 
+    typingEffect 4s steps(40, end) 5s 1 normal both,
+    blink .75s step-end 0s infinite;
+  
 }
 
 #plain {
     grid-column: 3;
+    justify-self: right;
+    border: none;
+    text-decoration: underline;
+    padding: .25em;
+    margin-inline-end: 3em;
 }
+
+#plain:hover {
+    border-color: black;
+    background-color: #67025481;
+}
+
 h1 {
-    font-family: "Geologica", sans-serif;
+    font-family: "area-normal", sans-serif;
+    font-weight: 2000;
+    font-style: normal;
     font-size: 64px;
     color: white;
     margin-top: 25%;
-    text-shadow: #1B0E1F 5px 5px 5px;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     border-right: .15em solid white; /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
     animation: 
       typingEffect 3.5s steps(40, end),
       blink .75s step-end infinite;
+}
+
+h3 {
+    font-size: 24px;
+    font-family: "area-normal", sans-serif;
+    font-weight: 900;
+}
+
+#foreword h3 {
+    font-size: 32px;
+    margin-top: .5em;
+}
+
+#hookTitle img {
+    max-width: 100px;
+    justify-self: right;
+    position: relative;
+    float: right;
+    transform: translateY(-147px) translateX(-40px);
+}
+
+#safeTitle img {
+    max-width: 100px;
+    justify-self: right;
+    position: relative;
+    float: right;
+    transform: translateY(-175px);
+}
+
+#choosepath h2 {
+    color: white;
+    font-family: "area-normal", sans-serif;
+    overflow:visible;
+    text-align: center;
+    font-size: 32px;
+    grid-column: 1 / span 2;
+    animation: typingEffect 3.5s steps(40, end), 
+    blink .75s step-end infinite;
+    margin-bottom: 2em;
 }
 
   /* The typing effect */
@@ -72,12 +148,23 @@ h1 {
   }
 
 h2 {
-    font-family: "Geologica", sans-serif;
-    display: none;
+    font-family: "area-normal", sans-serif;
+    opacity: 0;
     color: white;
-    text-shadow: #1B0E1F 5px 5px 5px;
-    animation-delay: 5s;
-    animation: appear 2s ease-in-out;
+    font-weight: 100;
+}
+
+#dynamic-fill {
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.titleHide {
+    display: none;
+}
+
+hr {
+    margin-bottom: 5em;
 }
 
 a {
@@ -97,6 +184,7 @@ a {
     grid-column: 1 / span 2;
     text-align: center;
     animation-delay: 10s;
+    color: black;
 }
 
 #choosepath div {
@@ -105,53 +193,13 @@ a {
     grid-template-rows: 2fr 1fr 1fr;
     max-height: 400px;
     justify-items: center;
+    margin: 2.5%;
 }
 
 #choosepath div:hover {
-    border: white 15px double;
-    animation: borderColor 1s infinite;
-}
-
-@keyframes borderColor {
-    10% {
-        border-color: red;
-    }
-
-    20% {
-        border-color: orange;
-    }
-
-    30% {
-        border-color: yellow;
-    }
-
-    40% {
-        border-color: green;
-    }
-
-    50% {
-        border-color: blue;
-    }
-
-    60% {
-        border-color: blueviolet;
-    }
-
-    70% {
-        border-color: purple;
-    }
-
-    80% {
-        border-color: pink;
-    }
-
-    90% {
-        border-color: white
-    }
-
-    100% {
-        border-color: lime;
-    }
+    border: white 3px solid;
+    cursor: pointer;
+    background-color: #81337351;
 }
 
 #girlpath {
@@ -166,10 +214,12 @@ a {
     grid-column: 1;
     grid-row: 1;
     margin-top: .5em;
+    /* filter: brightness(0) saturate(100%) */
 }
 
 #girlpath h3 {
-    font-family: "Geologica", sans-serif;
+    font-family: "area-normal", sans-serif;
+    font-weight: bold;
     font-size: 24px;
     color: white;
     grid-column: 1;
@@ -177,11 +227,13 @@ a {
 }
 
 #girlpath h4 {
-    font-family: "Geologica", sans-serif;
+    font-family: "area-normal", sans-serif;
     font-size: 18px;
     color: white;
     grid-column: 1;
     grid-row: 3;
+    margin-top: 0;
+    font-weight: bold;
 }
 
 #catpath {
@@ -191,15 +243,19 @@ a {
 }
 
 #catpath img {
-    max-width: 300px;
-    max-height: 300px;
+    max-width: 250px;
+    max-height: 250px;
     grid-column: 1;
     grid-row: 1;
     margin-top: .5em;
+    /* filter: brightness(0) saturate(100%) */
 }
 
+
+
 #catpath h3 {
-    font-family: "Geologica", sans-serif;
+    font-family: "area-normal", sans-serif;
+    font-weight: bold;
     font-size: 24px;
     color: white;
     grid-column: 1;
@@ -208,11 +264,13 @@ a {
 
 
 #catpath h4 {
-    font-family: "Geologica", sans-serif;
+    font-family: "area-normal", sans-serif;
     font-size: 18px;
     color: white;
     grid-column: 1;
     grid-row: 3;
+    margin-top: 0;
+    font-weight: bold;
 }
 
 #plainbody {
@@ -223,7 +281,7 @@ a {
 
 @keyframes appear {
     10% {
-        opacity: 0;
+        opacity: 1;
         transform: translateY(-15px);
     }
 
@@ -243,7 +301,7 @@ span.dialogue {
 
 #foreword {
     display: block;
-    opacity: 0;
+   opacity: 0;
     color: white;
     margin-left: 25%;
     margin-right: 25%;
@@ -252,18 +310,16 @@ span.dialogue {
     font-size: 18px;
     line-height: 150%;
     padding: 1em;
-    margin-top: 4em;
+    margin-top: 8em;
 }
 
-.hidden {
-    display: none;
-}
+
 
 .showthis {
     display: block;
     color: white;
-    margin-left: 25%;
-    margin-right: 25%;
+    /* margin-left: 25%;
+    margin-right: 25%; */
     background-color: #15031a; 
     font-family: "EB Garamond", serif;
     font-size: 18px;
@@ -276,6 +332,7 @@ span.dialogue {
     white-space: normal;
     line-height: 1;
     margin-top: 1em;
+    margin-bottom: 0;
 }
 
 .showthis h2 {
@@ -284,25 +341,37 @@ span.dialogue {
 }
 
 .question {
-    font-family: "Geologica", sans-serif;
+    font-family: "area-normal", sans-serif;
     font-size: 24px;
     color: white;
-    margin-top: 1e,
+    margin-top: 1em,
    
+}
+
+.questiondiv hr {
+    margin-bottom: .5em;
 }
 
 h6 {
     color: white;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "area-normal", sans-serif;
     font-weight: bold;
     font-size: 12px;
     margin: .2em;
     transform: translateY(7.5px);
 }
 
+h5 {
+    color: white;
+    font-family: "area-normal", sans-serif;
+    font-weight: 100;
+    animation: appear 5s ease-in-out
+
+}
+
 .questiondiv {
     background-color: #813373;
-    margin-top: 5em;
+    margin-top: 4em;
     padding-top: .2em;
     padding-left: 1em;
     padding-right: 1em;
@@ -312,10 +381,18 @@ h6 {
     /* visibility: hidden; */
 }
 
+.questiondiv:hover {
+    background-color: #670254;
+}
+
+.questiondiv p, .questiondiv li, .questiondiv ol {
+    visibility: hidden;
+}
+
 #the-end {
     display: none;
     color: white;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "area-normal", sans-serif;
     font-weight: bold;
     font-size: 36px;
     width: 100%;
@@ -328,7 +405,7 @@ h6 {
 .pullquote {
     margin: 1em;
     margin-left: .5em;
-    font-family: "EB Garamond", serif;
+    font-family: "area-normal", serif;
     font-weight: bold;
     font-size: 32px;
     line-height: 150%;
@@ -341,21 +418,28 @@ ol {
 
 .showthis ol {
     display: block;
-    font-family: "Geologica", sans-serif;
+    font-family: "area-normal", sans-serif;
     font-size: 24px;
+    font-weight: 900;
     color: white;
     padding-left: 0px;
 }
 
 .showthis li {
-    font-family: "Geologica", sans-serif;
+    font-family: "area-normal", sans-serif;
     font-size: 24px;
     text-decoration: underline;
+    font-weight: 900;
     line-height: 200%;
+    cursor: pointer;
 }
 
 .showthis li:hover {
     font-size: 26px;
+}
+
+.showthis p {
+    line-height: 160%;
 }
 
 .stay {
@@ -382,11 +466,13 @@ ol {
 #gethomesafe-plain {
     margin-left: 5%;
     margin-right: 5%;
-    font-family: "Geologica", sans-serif;
+    font-family: "area-normal", sans-serif;
 }
 
 #hooktail-plain {
     margin-left: 5%;
     margin-right: 5%;
-    font-family: "Geologica", sans-serif;
+    font-family: "area-normal", sans-serif;
 }
+
+

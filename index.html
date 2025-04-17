@@ -11,41 +11,44 @@
         <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     </head>
     <body id="indexbody">
-        <header id="stuff">
+        <header id="stuff" style="z-index: -15;">
         
-                <h3 id="name">Ash Reynolds</h3>
-                <h3 id="project">Invisible Nightlife</h3>
-                <h3 id="plain"><a href="plaintext.html">Plain text</a></h3>
+                <h3 id="name"></h3>
+                <h3 id="project">Scroll to begin...</h3>
+                <h3 id="plain"></h3>
          
         </header>
 
+       
+
         <header id="header">
             <h1>The Long Journey Home</h1>
-            <h2 id="mandy">Get Home Safe by Mandy Kim</h2>
-            <h2 id="ash">Hooktail Inn by Ash Reynolds</h2>
+            <h2 id="mandy"><i>Get Home Safe</i> by Mandy Kim</h2>
+            <h2 id="ash"><i>Hooktail Inn</i> by Ash Reynolds</h2>
         </header>
 
         <main>
             <section id="foreword">
+                
                 <h3>Foreword</h3>
                 <p id="foreword-p">
-                    The following are two short stories about parallel journeys home. One of an anxious traveler and another in the realm of fantasy. Throughout the story, you may be presented with the opportunities to flip between the imagined and the real, changing the outcome of your adventure.
+                    The following are two short stories about parallel journeys home. One of an anxious traveler and another in the realm of fantasy. When you think of nightlife, you likely think of being at a club, or stumbling your way to the next one. But what about what comes next? What stories unfold on the long journey home? Throughout your adventure, you may be presented with the opportunities to flip between the imagined and the real, changing the outcome of the story. Do not be afraid to experiment, you'll only hold yourself back.
 
                     You can choose where you story starts.
                 </p>
             </section>
 
             <section id="choosepath">
-                <h1>Path select</h1>
+                <h2>Path select</h2>
                 <div id="girlpath">
-                    <img src="assets/girl.png" alt="pixel art of girl">
-                    <h3>Get Home Safe</h3>
+                    <img src="assets/girl.svg" alt="pixel art of girl">
+                    <h3><i>Get Home Safe</i></h3>
                     <h4>By Mandy Kim</h4>
                 </div>
 
                 <div id="catpath">
-                    <img src="assets/cat.png" alt="pixel art of cat">
-                    <h3>Hooktail Inn</h3>
+                    <img src="assets/cat.svg" alt="pixel art of cat">
+                    <h3><i>Hooktail Inn</i></h3>
                     <h4>By Ash Reynolds</h4>
                 </div>
             </section>
@@ -53,6 +56,13 @@
 
           
             <section id="dynamic-fill">
+                <div id="hookTitle" class="titleHide">
+                    <h1>Hooktail Inn</h1><br><h2>By Ash Reynolds</h2><img src="assets/cat.svg"><hr>
+                </div>
+
+                <div id="safeTitle" class="titleHide">
+                    <h1>Get Home Safe</h1><br><h2>By Mandy Kim</h2><img src="assets/girl.svg""><hr>
+                </div>
 
                 <div id="0">
                 </div>
@@ -121,12 +131,15 @@
             <section id="stories">
                 <div id="hooktail">
                    
+                    
                     <div id="hooktail-part1" class="hidden">
-                        <h1>Hooktail Inn</h1><br><h2>By Ash Reynolds</h2><hr>
+                       
                         <p id="ash1" class="bodycopy">Looking back, I should’ve known something was off right away. The night had been a blur. The drinks, the dancing, and then, the shadow. Somehow, I ended up in a dark room, with low ceilings and puddles on an asphalt floor. The decor was peculiar. The ceiling was held up by an empty, oversized bottle of vodka. By the entrance, a ginormous piece of cardboard read, “Hooktail Inn: A Bar for Brooklyn Strays.” The writing seemed to be scratched in, barely legible. Illuminating the sign was what appeared to be a massive desk lamp craned to the left, filling the room with a flickering, warm light. I could hear the low hum of a crowd further within the room.</p>
+
 
                         <div class="questiondiv">
                             <h6>CHOICE</h6><hr>
+                            <h5>Click to reveal your options...</h5>
                             <p class="question">There’s a tiny hole in the wall behind me. Maybe I could walk out that way?</p>
 
                             <ol class="answers">Should I</ol>
@@ -147,6 +160,7 @@
 
                         <div class="questiondiv">
                             <h6>CHOICE</h6><hr>
+                            <h5>Click to reveal your options...</h5>
                             <p class="question">The flashing memories remind me of how I got here. Maybe if I try hard enough I could snap out of whatever trance this is.</p>
                             <ol class="answers">Should I</ol>
                             <li class="leave" id="hooktail-leave2">Snap out of it</li>
@@ -158,67 +172,68 @@
                             <p id="ash4-5" class="bodycopy">Now, I stood cat-face-to-cat-face with the shadow. A completely black cat. He stared at me, unblinking and stoic.</p>
 
 
-                            <p class="bodycopy" id="ash5"><span class="dialogue">What is this place?</span> I thought to myself. Somehow, he could hear me. And I could hear him. <br>
+                            <p class="bodycopy" id="ash5"><span class="dialogue">What is this place?</span> I thought to myself. Somehow, he could hear me. And I could hear him. <br><br>
                             <span class="dialogue">Didn’t you see the sign? It’s the Hooktail Inn. The top destination for Brooklyn Strays. Come with me.</span></p>
 
                             <p class="bodycopy" id="ash6">For some reason, I obliged, following him through the main room, passing the poker tables and the clique of Russian Blues. They eyed me up and down, unsure of what to make of the new visitor. I followed him into the eerie glow of a streetlight trickling in through a high window. Effortlessly, the shadow leaped up onto the window sill. He turned back to me, expectantly.</p>
                             
                         <p class="bodycopy" id="ash7">
                             <span class="dialogue">I can’t make that.</span>
-                        <br>
+                        <br><br>
                             <span class="dialogue">Yes you can.</span>
-                        <br>
+                        <br><br>
                             I sized up the distance from the ground to the window sill.
-                        <br>
+                        <br><br>
                             <span class="dialogue">Do we really always land on our feet?</span> I asked.
-                        <br>
+                        <br><br>
                             No response.
                             To my surprise, my back legs kicked off the floor and I landed gracefully right next to him, feeling the cool air radiating from the window. Before I could celebrate my accomplishment, the shadow turned his head.</p>
                         <p class="bodycopy" id="ash8">
                             <span class="dialogue">Look.</span>
-                        <br>
+                        <br><br>
                             I looked. Out there in the alley, under the flickering street light, was a pile of… something. Purple rhinestones reflected off a jacket that looked… familiar. Then, as the flickering light surged one last time before it went out, I saw it. My own face passed out on the pavement.
-                        <br>
+                        <br><br>
                             <span class="dialogue">Is that me?</span>
-                        <br>
+                        <br><br>
                             No response.
-                        <br>
+                        <br><br>
                             <span class="dialogue">Is that me?</span> I asked again. No response.
-                        <br>
+                        <br><br>
                             Before I knew what I was doing, I hissed at him and swiped a claw at his face. He dodged effortlessly, and leaped into the warehouse rafters.</p>
 
                         <p class="bodycopy" id="ash9">	
                         <span class="dialogue">Am I dead?</span> I asked. 
-                        <br>
+                        <br><br>
                             <span class="dialogue">Not yet,</span> he replied.
-                        <br>
+                        <br><br>
                             I braced myself and followed him up. <span class="dialogue">How do I get back to my body?</span>
-                        <br>
+                        <br><br>
                             <span class="dialogue">If you really want to, you just have to go out there and wake yourself up.</span>
-                            <br>
+                            <br><br>
                         <span class="dialogue">And if I don’t want to?</span>
-                        <br>
+                        <br><br>
                         <span class="dialogue">Then don’t.</span>
-                        <br>
+                        <br><br>
                             I turned my head in confusion. Following his gaze, I looked down on the patrons of the Hooktail Inn below.
-                        <br>
+                        <br><br>
                             <span class="dialogue">Were they all…</span>
-                        <br>
+                        <br><br>
                             <span class="dialogue">Yes,</span> he responded. <span class="dialogue">You have to be in a certain… state of mind to stray off into Hooktail Alley. Some people decide they’d rather stay and live as a stray than go back to their real life. </span>
-                        <br>
+                        <br><br>
                             I turned to him. <span class="dialogue">Is that what you did?</span>
-                        <br>
+                        <br><br>
                             <span class="dialogue">Doesn’t matter,</span> he replied, curtly. <span class="dialogue">What’re you going to do?</span>
-                        <br>
+                        <br><br>
                             My gaze darted all around. The strays all seemed to be having a great time tonight. One of the orange tabby’s had just won big in poker, taking the whole pot of treats for himself. I wanted to stay. What else was waiting for me out there?
-                        <br>
+                        <br><br>
                             <span class="dialogue">What do you think I should do?</span> I asked the shadow.
-                        <br>
+                        <br><br>
                             I turned and he was gone.
                         </p>
 
                         <div class="questiondiv">
                             <h6>CHOICE</h6><hr>
+                            <h5>Click to reveal your options...</h5>
                             <p class="question">What should I do?</p>
                             <ol>Should I</ol>
                             <li class="leave" id="hooktail-leave3">Try to wake up</li>
@@ -228,16 +243,16 @@
 
                     <div id="hooktail-part4" class="hidden">
                         <p class="bodycopy" id="ash10">My mind was racing. I needed more information. Could I turn back into a human eventually? How much time did I have to decide? Did I even want to be human again? And maybe the fact I was asking at all was answer enough. Trembling, I took a step back and felt myself slip. I flung my feline limbs frantically, trying to get my footing on the rafter. As I flailed, I could only think one thought.
-                        <br>
+                        <br><br>
                         <span class="dialogue">God, I hope I land on my feet.</span>
                         </p>
 
                         <p class="bodycopy" id="ash11">Then, something coarse swept across my face. My eyes opened and I sprang upward. I was a human again, sitting in Hooktail Alley. I stumbled to where the window should’ve been. Placing my hand against the wall, all I felt was cold brick. Maybe someone had slipped something in my drink…
-                        <br>
+                        <br><br>
                         <span class="dialogue">I guess I should get back home.</span>
-                        <br>
+                        <br><br>
                         I took one last look at the alley, as though the Inn might reappear on a double take, but no luck. I waited, but the bricks stayed fixed. Then, the course feeling tickled my ankles, protruding from my sneakers. I looked down.
-                        <br>
+                        <br><br>
                         Meeting my gaze was a black cat, miraculously dry in the pouring rain, rubbing softly up against my legs.</p>
                     </div>
                 </div>
@@ -245,7 +260,7 @@
                 <div id="gethomesafe">
                 <div id="gethomesafe-part1" class="hidden">
                     
-                    <h1>Get Home Safe</h1><br><h2>By Mandy Kim</h2><hr>
+                    
                     <p class="bodycopy" id="mandy1">The silence of night was eerie, almost deafening. It always made me anxious, having to hear the sounds of my reality. It felt like I was subjecting myself to an out-of-body experience—my mind fixated on the sounds happening outside of me, and the presence of those around me. My earbuds were like a sanctuary. Music drowned out the external noise, grounding my mind back inside me—my anxiety, a quiet hum. I didn’t want to give my mind the opportunity to dissect my environment, but I still had to remain diligent. After all, I needed to get home safe.</p>
 
                     <p class="pullquote">“Get home safe.” <br>
@@ -253,6 +268,7 @@
 
                     <div class="questiondiv">
                         <h6>CHOICE</h6><hr>
+                        <h5>Click to reveal your options...</h5>
                         <p class="question">I spotted something in the corner of my eye. A shadow…</p>
                         
                         <ol>Should I...</ol>
@@ -266,6 +282,7 @@
 
                     <div class="questiondiv">
                         <h6>CHOICE</h6><hr>
+                        <h5>Click to reveal your options...</h5>
                         <p class="question">There it is again! A shadow in the corner of my eye…</p>
                         <ol>Should I...</ol>
                         <li class="stay" id="GHS-stay2">Keep heading home</li>
@@ -284,6 +301,7 @@
 
                     <div class="questiondiv">
                         <h6>CHOICE</h6><hr>
+                        <h5>Click to reveal your options...</h5>
                         <p class="question">What was that sound? I turn and see a small doorway in an alleyway, with a strange noise coming from inside.</p>
                         <ol>Should I</ol>
                         <li class="stay" id="GHS-stay3">Keep heading home</li>
