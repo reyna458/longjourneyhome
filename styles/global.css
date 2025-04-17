@@ -76,8 +76,22 @@
     margin-inline-end: 3em;
 }
 
+#plain1 {
+    grid-column: 3;
+    justify-self: right;
+    border: none;
+    text-decoration: underline;
+    padding: .25em;
+    margin-inline-end: 3em;
+    border: white solid 1px;
+}
+
 #plain:hover {
     border-color: black;
+    background-color: #67025481;
+}
+
+#plain1:hover {
     background-color: #67025481;
 }
 
@@ -389,8 +403,11 @@ h5 {
     visibility: hidden;
 }
 
-#the-end {
+#the-end-div {
     display: none;
+}
+
+#the-end {
     color: white;
     font-family: "area-normal", sans-serif;
     font-weight: bold;
@@ -400,6 +417,13 @@ h5 {
    justify-items: center;
    margin-top: 2em;
    margin-bottom: 2em;
+}
+
+#reset {
+    justify-self: center;
+    font-size: 15px;
+    margin-bottom: 2em;
+    text-decoration: underline;
 }
 
 .pullquote {
@@ -476,3 +500,69 @@ ol {
 }
 
 
+@media screen and (max-width: 820px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    .pullquote{
+        font-size: 20px;
+    }
+
+    .showthis {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    #dynamic-fill {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    #name {
+        display: none;
+    }
+
+    #project {
+        display: none;
+    }
+
+    #stuff {
+        display: inline;
+    }
+
+    #plain {
+        justify-self: left;
+        font-size: 16px;
+    }
+
+    #foreword {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+
+@media screen and (max-width: 450px) {
+    h1 {
+        font-size: 18px;
+    }
+
+    .showthis {
+        margin-left: .5em;
+        margin-right:.5em;
+    }
+
+    #dynamic-fill {
+        margin-left: .5em;
+        margin-right: .5em;
+    }
+    
+    .question p {
+        font-size: 16px;
+    }
+}

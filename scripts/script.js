@@ -12,15 +12,14 @@ $(document).ready(function()
             $('h2').css("animation", "appear 2s ease-in-out")
             $('#project').html("Invisible Nightlife")
           
-            var delay = 5000;
-            setTimeout(function() {
+           
                 $('#name').html("The Long Journey Home")
 
                 $('#plain').html(
                     "<a href='plaintext.html'>Plain text</a>"
                 )
                 $('#plain').css("border", "white solid 2px")
-                    }, delay);  
+                    
         
         } 
              
@@ -170,7 +169,7 @@ $(document).ready(function()
         let targetDiv = `#` + graphCount
         $(targetDiv).html(ghsFour);
         $(targetDiv).addClass('showthis');
-        $('#the-end').css("display", "block")
+        $('#the-end-div').css("display", "block")
         $(this).prop('disabled', true);
         $('#GHS-leave3').prop('disabled', true);
         $(this).css("color", "aqua")
@@ -226,7 +225,7 @@ $(document).ready(function()
         $(targetDiv).html(ghsFour);
         alert("Wake up! Snap out of it! You still have to make it home!")
         $(targetDiv).addClass('showthis');
-        $('#the-end').css("display", "block")
+        $('#the-end-div').css("display", "block")
         $(this).prop('disabled', true);
         $('#hooktail-stay2').prop('disabled', true);
         $(this).css("color", "aqua")
@@ -239,7 +238,7 @@ $(document).ready(function()
         let targetDiv = `#` + graphCount
         $(targetDiv).html(hooktailFour);
         $(targetDiv).addClass('showthis');
-        $('#the-end').css("display", "block")
+        $('#the-end-div').css("display", "block")
         $(this).prop('disabled', true);
         $('#hooktail-leave3').prop('disabled', true);
         $(this).css("color", "aqua")
@@ -251,11 +250,19 @@ $(document).ready(function()
         $(targetDiv).html(ghsFour);
         alert("Wake up! Snap out of it! You still have to make it home!")
         $(targetDiv).addClass('showthis');
-        $('#the-end').css("display", "block")
+        $('#the-end-div').css("display", "block")
         $(this).prop('disabled', true);
         $('#hooktail-stay3').prop('disabled', true);
         $(this).css("color", "aqua")
         $('#project').html(ghsTitle)
     });
+
+    $(document).on('click', '#reset', function() {
+        alert("Was it all a dream...?");
+        setTimeout(function() {
+            window.location.reload();
+        }, 200); // waits half a second before reloading
+    });
+    
 
  })
