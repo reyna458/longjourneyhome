@@ -514,6 +514,11 @@ ol {
         margin-right: 10%;
     }
 
+    .bodycopy.showthis {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
     #dynamic-fill {
         margin-left: 10%;
         margin-right: 10%;
@@ -553,6 +558,11 @@ ol {
     }
 
     .showthis {
+        margin-left: .5em;
+        margin-right:.5em;
+    }
+
+    .bodycopy.showthis {
         margin-left: .5em;
         margin-right:.5em;
     }
